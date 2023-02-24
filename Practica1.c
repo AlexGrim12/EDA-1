@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 //Variables Globales
-int autos[5][3], sumaFilas[5], sumaColumnas[3], porcentajes[5][3], sumaPoFilas[5], sumaPoColumnas[3], iMenor, jMenor, iMayor, jMayor;
+int autos[5][3], sumaFilas[5], sumaColumnas[3], porcentajes[5][3], sumaPoFilas[5], sumaPoColumnas[3], menorMarca, menorPeriodo, mayorMarca, mayorPeriodo;
 char marcas[5][10] = {"Ford", "BMW", "Toyota", "Tesla", "Nissan"};
 char periodos[4][10] = {"Oct.", "Nov.", "Dic.", "Total"};
 
@@ -95,15 +95,15 @@ void ventaBajaAlta() //Obtener la venta mas baja y alta
         {
             if (autos[i][j] < menor)
             {
-                iMenor = i;
-                jMenor = j;
+                menorMarca = i;
+                menorPeriodo = j;
                 menor = autos[i][j];
             }
 
             if (autos[i][j] > mayor)
             {
-                iMayor = i;
-                jMayor = j;
+                mayorMarca = i;
+                mayorPeriodo = j;
                 mayor = autos[i][j];
             }
         }
@@ -112,7 +112,7 @@ void ventaBajaAlta() //Obtener la venta mas baja y alta
 
 void guardarArchivo()
 {
-    
+
 }
 
 //Funcion principal
@@ -139,9 +139,9 @@ int main()
     //Venta mayor y menor
     ventaBajaAlta();
     printf("\n\n..::::Venta mas baja::::..\n");
-    printf("Marca: %s\nMes: %s", marcas[iMenor], periodos[jMenor]);
+    printf("Marca: %s\nMes: %s", marcas[menorMarca], periodos[menorPeriodo]);
     printf("\n\n..::::Venta mas alta::::..\n");
-    printf("Marca: %s\nMes: %s", marcas[iMayor], periodos[jMayor]);
+    printf("Marca: %s\nMes: %s", marcas[mayorMarca], periodos[mayorPeriodo]);
 
     return 0;
 }
