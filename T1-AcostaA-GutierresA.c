@@ -115,7 +115,7 @@ void ventaBajaAlta() //Obtener la venta mas baja y alta
 void crearArchivo()
 {
     FILE *archivo;
-    archivo = fopen("MatrizOriginal.txt", "w");
+    archivo = fopen("T1-AcostaA-GurierrezA.txt", "w");
 
     fprintf(archivo, "..::::Matriz Original::::..\n\t");
     for (int i = 0; i < 4; i++)
