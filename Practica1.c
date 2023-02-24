@@ -2,7 +2,7 @@
 
 //Variables Globales
 int autos[5][3], sumaFilas[5], sumaColumnas[3], porcentajes[5][3], sumaPoFilas[5], sumaPoColumnas[3], menorMarca, menorPeriodo, mayorMarca, mayorPeriodo;
-char marcas[5][10] = {"Ford", "BMW", "Toyota", "Tesla", "Nissan"};
+char marcas[5][10] = {"Ford", "BMW ", "Toyota", "Tesla", "Nissan"};
 char periodos[4][10] = {"Oct.", "Nov.", "Dic.", "Total"};
 
 //Funciones
@@ -112,7 +112,28 @@ void ventaBajaAlta() //Obtener la venta mas baja y alta
 
 void guardarArchivo()
 {
+    FILE *archivo;
+    archivo = fopen("MatrizOriginal.txt", "w");
 
+    fprintf(archivo, "..::::Matriz Original::::..\n\t");
+    for (int i = 0; i < 4; i++)
+        fprintf(archivo, "\t%s", periodos[i]);
+
+    fprintf(archivo, "\n");
+    for(int i = 0; i < 5; i ++)
+    {
+        fprintf(archivo, "%s", marcas[i]);
+        for(int j = 0; j < 3; j ++)
+            fprintf(archivo, "\t%d\t", autos[i][j]);
+        fprintf(archivo, "\t  %d", sumaFilas[i]);
+        fprintf( archivo, "\n");
+    }
+
+    fprintf(archivo, "\nTotal");
+    for (int i = 0; i < 3; i++)
+        fprintf(archivo, "\t%d\t", sumaColumnas[i]); 
+    
+    fclose(archivo);
 }
 
 //Funcion principal
@@ -142,6 +163,9 @@ int main()
     printf("Marca: %s\nMes: %s", marcas[menorMarca], periodos[menorPeriodo]);
     printf("\n\n..::::Venta mas alta::::..\n");
     printf("Marca: %s\nMes: %s", marcas[mayorMarca], periodos[mayorPeriodo]);
+
+    //Guardar matriz original en archivo
+    guardarArchivo();
 
     return 0;
 }
