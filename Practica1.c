@@ -110,7 +110,7 @@ void ventaBajaAlta() //Obtener la venta mas baja y alta
     }
 }
 
-void guardarArchivo()
+void crearArchivo()
 {
     FILE *archivo;
     archivo = fopen("MatrizOriginal.txt", "w");
@@ -165,7 +165,7 @@ int main()
     printf("Marca: %s\nMes: %s", marcas[mayorMarca], periodos[mayorPeriodo]);
 
     //Guardar matriz original en archivo
-    guardarArchivo();
+    crearArchivo();
 
     return 0;
 }
