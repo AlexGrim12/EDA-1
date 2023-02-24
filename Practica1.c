@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 //Variables Globales
-int autos[5][3], sumaFilas[5], sumaColumnas[3], porcentajes[5][3], sumaPoFilas[5], sumaPoColumnas[3], menorMarca, menorPeriodo, mayorMarca, mayorPeriodo;
+int autos[5][3], sumaFilas[5], sumaColumnas[3];
+int porcentajes[5][3], sumaPoFilas[5], sumaPoColumnas[3];
+int menorMarca, menorPeriodo, mayorMarca, mayorPeriodo;
 char marcas[5][10] = {"Ford", "BMW ", "Toyota", "Tesla", "Nissan"};
 char periodos[4][10] = {"Oct.", "Nov.", "Dic.", "Total"};
 
