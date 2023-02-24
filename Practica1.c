@@ -134,6 +134,8 @@ void crearArchivo()
         fprintf(archivo, "\t%d\t", sumaColumnas[i]); 
     
     fclose(archivo);
+
+    printf("\n\nEl archivo se creo con exito");
 }
 
 //Funcion principal
