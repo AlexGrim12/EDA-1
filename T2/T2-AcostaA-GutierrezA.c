@@ -36,8 +36,10 @@ int main()
     
     printf("\t\t\t.::Arreglo de numeros pares::.\n");
     mostrarArreglo(ap1);
+
     printf("\n\t\t.::Arreglo de numeros multiplos de cinco::.\n");
     mostrarArreglo(ap2);
+    
     printf("\n\t\t\t\t.::Suma::.\n");
     mostrarArreglo(ap3);
     
