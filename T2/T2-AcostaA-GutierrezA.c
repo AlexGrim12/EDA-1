@@ -1,52 +1,20 @@
 #include <stdio.h>
 
 //Variables globales
-int pares[10], multiCinco[10], suma[10], *apuntador1, *apuntador2, *apuntador3;
+int pares[10], multiCinco[10], suma[10], *ap1, *ap2, *ap3;
 
 
-void llenarPares()
+void llenarArreglo(int *apuntadorArreglo, int multiplo)
 {   
-    int j = 1, flag = 0;
-    apuntador1 = &pares[0];
-    
-    for (int i = 0; i < 10; i ++)
-    {
-        do 
-        {
-            *(apuntador1 + i) = j ++;
-            
-            if (*(apuntador1 + i) % 2 != 0)
-                flag = 0;
-            else
-                flag = 1;
-        } while (flag == 0);
-    }
+    for (int i = 1; i <= 10; i ++)
+        *(apuntadorArreglo + (i - 1)) = multiplo * i;
 }
 
-void llenarMultiCinco()
+void sumar()
 {
-    int j = 1, flag = 0;
-    apuntador2 = &multiCinco[0];
-    
+    ap3 = &suma[0];
     for (int i = 0; i < 10; i ++)
-    {
-        do 
-        {
-            *(apuntador2 + i) = j ++;
-            
-            if (*(apuntador2 + i) % 5 != 0)
-                flag = 0;
-            else
-                flag = 1;
-        } while (flag == 0);
-    }
-}
-
-void sumar ()
-{
-    apuntador3 = &suma[0];
-    for (int i = 0; i < 10; i ++)
-        *(apuntador3 + i) = *(apuntador1 + i) + *(apuntador2 + i);
+        *(ap3 + i) = *(ap1 + i) + *(ap2 + i);
 }
 
 void mostrarArreglo (int *arreglo)
@@ -58,17 +26,20 @@ void mostrarArreglo (int *arreglo)
 
 int main()
 {
-    llenarPares();
-    llenarMultiCinco();
+    ap1 = &pares[0];
+    llenarArreglo(ap1, 2);
+
+    ap2 = &multiCinco[0];
+    llenarArreglo(ap2, 5);
     
     sumar();
     
-    printf("\n\t\t\t.::Arreglo de numeros pares::.\n");
-    mostrarArreglo(apuntador1);
+    printf("\t\t\t.::Arreglo de numeros pares::.\n");
+    mostrarArreglo(ap1);
     printf("\n\t\t.::Arreglo de numeros multiplos de cinco::.\n");
-    mostrarArreglo(apuntador2);
+    mostrarArreglo(ap2);
     printf("\n\t\t\t\t.::Suma::.\n");
-    mostrarArreglo(apuntador3);
+    mostrarArreglo(ap3);
     
     return 0;
 }
