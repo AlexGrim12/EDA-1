@@ -53,7 +53,7 @@ int main()
     arrayP[1] = P2;
     arrayP[2] = P3;
     arrayP[3] = P4;
-    arrayP[4] = P1;
+    arrayP[4] = P5;
     
     constructor(18, "TV       ", 560, 4, &arrayP[5]);
     constructor(20, "Laptop   ", 300, 10, &arrayP[6]);
