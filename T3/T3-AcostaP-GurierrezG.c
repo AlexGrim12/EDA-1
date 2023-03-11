@@ -29,7 +29,7 @@ void mostrarPrt(struct Producto P) // Muestra los datos de una variable de tipo 
 
 void guardarArchivoB(struct Producto P) 
 {
-    fprintf(archivoB, "  %d \t\t%s  \t\t$%.2f    \t\t    %d\n", P.codigoPrt, P.descripcionPrt, P.precioPrt, P.existenciaPrt);
+    fprintf(archivoB, "  %d \t\t%s  \t\t$%.2f    \t\t    %d\n", P.codigoPrt, P.descripcionPrt, P.precioPrt, P.existenciaPrt); // Cambiar a fwrite
 }
 
 int main()
@@ -77,7 +77,7 @@ int main()
     archivoB = fopen("T3-AcostaP-GurierrezG.bin", "w");
     
     // Guardando el arreglo en el archivo binario
-    fprintf(archivoB, "Codigo\tDescripcion\t\tPrecio\t\tExistencia\n");
+    fprintf(archivoB, "Codigo\tDescripcion\t\tPrecio\t\tExistencia\n"); // Cambiar a fwrite
     for(int i = 0; i < 7; i ++)
         guardarArchivoB(arrayP[i]);
         
