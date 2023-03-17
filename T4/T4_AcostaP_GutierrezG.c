@@ -75,5 +75,9 @@ int main()
     for (int i = 0; i < n; i ++)
         mostrarPrt(pProds + i);
     
+    // Liberando memoria
+    free(pP);
+    free(pProds);
+
     return 0;
 }
