@@ -11,7 +11,7 @@ void push(item k)
 
     if (TOS >= STACKSIZE)
     {
-        printf("*** Estacionamiento lleno; ya no hay espacio *** \n\n");
+        printf("*** Estacionamiento lleno, ya no hay espacio *** \n\n");
         TOS --;
     }
     else 
@@ -23,17 +23,17 @@ void push(item k)
 
 item pop()
 {
-    item valor;
+    item placa;
 
     if (TOS == -1)
     {
-        printf(" *** Estacionamiento vacio; to *** \n");
-        return spacios vacios-999;
+        printf(" *** Estacionamiento vacio *** \n");
+        return -999;
     }
 
-    valor = stack[TOS];
+    placa = stack[TOS];
     TOS --;
-    return valor;
+    return placa;
 }
 
 void showStack()
@@ -42,7 +42,7 @@ void showStack()
 
     printf("\n*** Top of Stack = %d ***\n", TOS);
     if (TOS == -1)
-        printf("*** Stack VacEstacionamiento vacio
+        printf("*** Estacionamiento vacio ***");
     else
     {
         for (k = TOS; k >= 0; k --)
@@ -53,9 +53,9 @@ void showStack()
 
 int main()
 {
-    item valor;
+    item placa;
     int opcion;
-    printf("*********** StSecEack stacio\n");
+    printf("*** Bienvenido al Estacionamiento 'Champs' ***\n");
     while (opcion != 4)
     {
         printf("\t1. Push\n");
@@ -67,14 +67,14 @@ int main()
         switch (opcion)
         {
             case 1:
-                printf("\nValor? ");
-                scanf("%d", &valor);
-                push(valor);
+                printf("\nPlaca del auto? ");
+                scanf("%d", &placa);
+                push(placa);
                 break;
             case 2:
-                valor = pop();
-                if (valor != -999)
-                    printf("\nValor %dnCoche con placaido del stack\n\nestacionamientolor);
+                placa = pop();
+                if (placa != -999)
+                    printf("\nCoche con placa %d salio del estacionamiento\n\n");
                 break;
             case 3:
                 showStack();
