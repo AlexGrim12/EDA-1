@@ -14,7 +14,7 @@ void sumar() //Sumar los arreglos pares y multiplos de cinco
 {
     ap3 = &suma[0]; // Apuntador al arreglo suma
     for (int i = 0; i < 10; i ++)
-        *(ap3 + i) = *(ap1 + i) + *(ap2 + i); // Sumar los valores de los arreglos pares y multiplos de cinco
+        *(ap3 + i) = *(ap1 + i) + *(ap2 + i); // Sumar los valores de los arreglos pares y multiplos de cinco 
 }
 
 void mostrarArreglo (int *arreglo) //Mostrar cualquier arreglo
