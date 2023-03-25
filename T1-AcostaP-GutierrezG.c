@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Variables Globales
+// Variables Globales 
 int autos[5][3], sumaFilas[5], sumaColumnas[3];
 int porcentajes[5][3], sumaPoFilas[5], sumaPoColumnas[3];
 int menorMarca, menorPeriodo, mayorMarca, mayorPeriodo;

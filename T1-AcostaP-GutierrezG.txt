@@ -1,0 +1,9 @@
+..::::Matriz Original::::..
+		Oct.	Nov.	Dic.	Total
+Ford	1		2		3		  6
+BMW 	4		5		6		  15
+Toyota	7		8		9		  24
+Tesla	10		1		2		  13
+Nissan	3		4		5		  12
+
+Total	25		20		25	
