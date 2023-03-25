@@ -38,7 +38,7 @@ int main()
     printf("Codigo\t\tDescripcion\tPrecio\t\tExistencia\n");
     mostrarPrt(pP);
 
-    // Preguntar cuantos espacios del array dinamico pProds quiere usar el usuario 
+    // Preguntar cuantos espacios del array dinamico pProds quiere usar el usuario  
     printf("\nCuantos productos?\n"); 
     do
     {
