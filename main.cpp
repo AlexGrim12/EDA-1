@@ -6,7 +6,7 @@ typedef int item;
 typedef struct
 {
   item dato;
-  nodo *link;
+  Nodo *link;
   int emergencia;
 } Nodo;
 
@@ -41,7 +41,7 @@ void QInsert (item valor)
 item QRemove ()
 {
   item valor;
-  nodo *pN;
+  Nodo *pN;
   if (HEAD == NULL)
     {
       printf ("*** Queue Underflow - Cola vacia ***\n");
