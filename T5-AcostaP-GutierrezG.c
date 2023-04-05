@@ -58,7 +58,7 @@ void popDato(int dato) { // Eliminar un dato especifico del stack
 }
 
 
-void showStack() {
+void showStack() { // Mostrar el stack
     if (TOS == -1) // Comprobar si hay elementos
         printf("\n\t*** Estacionamiento vacio ***");
     else { // Imprimir datos
