@@ -1,6 +1,7 @@
 #include <stdio.h>
 #define MAXSTACK 10 // Máximo tamaño del stack
 
+// Variables Globales
 int stack[MAXSTACK], stackC[MAXSTACK], TOS = -1, TOSC = -1;
 
 void push(int dato) { // Agregar dato al stack
