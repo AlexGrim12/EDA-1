@@ -38,6 +38,7 @@ void mostrarLista(Nodo *lista) {
         printf("%d \t", actual->dato);
         actual = actual->siguiente;
     }
+    printf("\n");
 }
 
 void buscarLista(Nodo *lista, int n) {
